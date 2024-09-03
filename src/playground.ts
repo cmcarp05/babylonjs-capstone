@@ -21,6 +21,11 @@ class Playground {
         // Move the sphere upward 1/2 its height
         sphere.position.y = 1;
 
+        // Create a material for the sphere
+        var sphereMaterial = new BABYLON.StandardMaterial("sphereMaterial", scene);
+        sphereMaterial.diffuseColor = new BABYLON.Color3(0, 1, 0); // Green color (RGB: 0, 1, 0)
+        sphere.material = sphereMaterial; // Apply the material to the sphere
+
         // Our built-in 'ground' shape. Params: name, options, scene
         var ground = BABYLON.MeshBuilder.CreateGround("ground", { width: 6, height: 6 }, scene);
 
